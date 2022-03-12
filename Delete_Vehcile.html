@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>EV Cars Database-About Us</title>
+    <title>EV Cars Database-Delete Vehcile Registration</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js" ></script>
     <style>
         /* Add a gray background color and some padding to the footer */
         footer {
@@ -93,26 +94,59 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <a href="./Ev_Cars-Washington.html" class="btn btn-success" role="button"> <span
+                class="glyphicon glyphicon-chevron-left"></span>Back</a>
+    </div>
+    <div class="container">
 
-
-    <div class="container" >
-        <div class="jumbotron col-sm-3" >
-          <h1>Bootstrap Tutorial</h1>      
-          <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
-        </div>    
-        <div class="col-sm-1" > </div> 
-        <div class="jumbotron col-sm-3">
-          <h1>Bootstrap Tutorial</h1>      
-          <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
-        </div> 
-        <div class="col-sm-1" > </div> 
-        <div class="jumbotron col-sm-3">
-          <h1>Bootstrap Tutorial</h1>      
-          <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
-        </div>   
-      </div>
-
-      <footer class="container-fluid text-center">
+        <legend>
+            <h3>Delete Vehcile Registration</h3>
+        </legend>
+        
+        <div class="form-group form-inline col-sm-12">
+           <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <label for="vin">Vehcile Identification Number</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="vin" data-toggle="tooltip" title="Vehcile Identification Number" maxlength="10">
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-3">
+                <br><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Delete</button>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Alert</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>Are you sure you want to Delete Registration</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="./DeleteSuccess.html" class="btn btn-success"id="Delete" role="button" data-toggle="tooltip" title="Delete"> Delete</a>
+                          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+             </div>
+        </div>
+        <legend>&nbsp</legend>
+        <div style="height: 230px;" id="show1" ></div>
+       
+</div>
+    </div>
+    <br><br>
+    <footer class="container-fluid text-center">
         <p>© 2022 Group 12</p>
     </footer>
 

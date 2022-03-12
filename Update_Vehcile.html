@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EV Cars Database-Update Vehcile Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/main.js" ></script>
+    <script>
+        function myFunction() {
+          document.getElementById("make").disabled = false;
+          document.getElementById("year").disabled = false;
+          document.getElementById("model").disabled = false;
+          document.getElementById("range").disabled = false;
+          document.getElementById("msrp").disabled = false;
+          document.getElementById("evt").disabled = false;
+          document.getElementById("capv").disabled = false;
+          document.getElementById("ad1").disabled = false;
+          document.getElementById("ad2").disabled = false;
+          document.getElementById("county").disabled = false;
+          document.getElementById("city").disabled = false;
+          document.getElementById("zip").disabled = false;
+          document.getElementById('submit').style.display = "block";
+          document.getElementById('edit').style.display = "none";
+        }
+        function myFunction1() {
+            document.getElementById('show').style.display = "block";
+            document.getElementById('show1').style.display = "none";
+        }
+        </script>
+    <style>
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .navbar-inverse .navbar-brand {
+            background-color: lightgreen;
+            color: black;
+        }
+
+        .navbar-inverse .navbar-collapse {
+            background-color: lightgreen;
+            border-color: black;
+            color: black;
+        }
+
+        .carousel-inner>.item>img {
+            height: 450px;
+        }
+
+        .navbar-inverse {
+            background-color: lightgreen;
+            border-color: lightgreen;
+        }
+
+        .navbar-inverse .navbar-nav>.active>a {
+            background-color: lightgreen;
+            border-color: black;
+            color: black;
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: black;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            /* Set width to 100% */
+            min-height: 200px;
+        }
+
+        .wrapper {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">EV Cars Database</div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="true"> <span class="nav-label">Location</span> <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./Ev_Cars-Washington.html">Washington</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./AboutUs.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <a href="./Ev_Cars-Washington.html" class="btn btn-success" role="button"> <span
+                class="glyphicon glyphicon-chevron-left"></span>Back</a>
+    </div>
+    <div class="container">
+
+        <legend>
+            <h3>Update Vehcile Registration</h3>
+        </legend>
+        
+        <div class="form-group form-inline col-sm-12">
+           <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <label for="vin">Vehcile Identification Number</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="vin" data-toggle="tooltip" title="Vehcile Identification Number" maxlength="10">
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-3">
+                <br><input type="button" class="btn btn-success" role="button" id="sub" value="Submit" data-toggle="tooltip" title="Submit" onclick="myFunction1()">
+             </div>
+        </div>
+        <legend>&nbsp</legend>
+        <div style="height: 230px;" id="show1" ></div>
+        <div id="show" style="display:none;">
+        <div class="form-group form-inline col-sm-12">
+            <div class="col-sm-3">
+                <label for="vin">Vehcile Identification Number</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="vin" data-toggle="tooltip" title="Vehcile Identification Number" maxlength="10" disabled>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <label for="make">Vehcile Manufacturer</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="make" data-toggle="tooltip" title="Vehcile Manufacturer" maxlength="10" disabled>
+            </div>
+        </div>
+        <div class="form-group form-inline col-sm-12">
+            <div class="col-sm-3">
+                <label for="year">Year of Manufacturing</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="year" data-toggle="tooltip" title="Year of Manufacturing" maxlength="4" disabled>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <label for="model">Vehcile Model</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="model" data-toggle="tooltip" title="Vehcile Modal" maxlength="10" disabled>
+            </div>
+        </div>
+        <div class="form-group form-inline col-sm-12">
+            <div class="col-sm-3">
+                <label for="range">Electric Range</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="range" data-toggle="tooltip" title="Electric Range" maxlength="3" disabled>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <label for="msrp">Manufacturer's Suggested Retail Price</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="msrp" data-toggle="tooltip" title="Manufacturer's Suggested Retail Price" disabled>
+            </div>
+        </div>
+        <div class="form-group form-inline col-sm-12">
+            <div class="col-sm-3">
+                <label for="evt">Electric Vehicle Type</label>
+            </div>
+            <div class="col-sm-3">
+                <select class="form-control" id="evt" data-toggle="tooltip" title="Electric Vehicle Type" disabled>
+                    <option>Select</option>
+                    <option>Battery Electric Vehicle (BEV)</option>
+                    <option>Plug-in Hybrid Electric Vehicle (PHEV)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group form-inline col-sm-12">
+            <div class="col-sm-3">
+                <label for="capv">Clean Alternative Fuel Vehicle (CAFV) Eligibility</label>
+            </div>
+            <div class="col-sm-3">
+                <select class="form-control" id="capv" data-toggle="tooltip" title="Clean Alternative Fuel Vehicle (CAFV) Eligibility" disabled>
+                    <option>Select</option>
+                    <option>Clean Alternative Fuel Vehicle Eligible</option>
+                    <option>Not eligible due to low battery range</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-inline col-sm-12">
+            <div class="col-sm-3">
+                <label for="ad1">Address Line1</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="ad1" required data-toggle="tooltip" title="Address Line1" disabled>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <label for="ad2">Address Line 2</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="ad2" data-toggle="tooltip" title="Address Line2" disabled>
+            </div>
+        </div>
+        <div class="form-group form-inline col-sm-12">
+            <div class="col-sm-3">
+                <label for="county">County</label>
+            </div>
+            <div class="col-sm-2">
+                <select class="form-control" id="county" data-toggle="tooltip" title="County" disabled>
+                    <option>Select</option>
+                    <option>Adams County</option>
+                    <option>Asotin County</option>
+                    <option>Benton County</option>
+                    <option>Chelan County</option>
+                    <option>Clallam County</option>
+                    <option>Clark County</option>
+                    <option>Columbia County</option>
+                    <option>Cowlitz County</option>
+                    <option>Douglas County</option>
+                    <option>Ferry County</option>
+                    <option>Franklin County</option>
+                    <option>Garfield County</option>
+                    <option>Grant County</option>
+                    <option>Grays Harbor County</option>
+                    <option>Island County</option>
+                    <option>Jefferson County</option>
+                    <option>King County</option>
+                    <option>Kitsap County</option>
+                    <option>Kittitas County</option>
+                    <option>Klickitat County</option>
+                    <option>Lewis County</option>
+                    <option>Lincoln County</option>
+                    <option>Mason County</option>
+                    <option>Okanogan County</option>
+                    <option>Pacific County</option>
+                    <option>Pend Orielle County</option>
+                    <option>Pierce County</option>
+                    <option>San Juan County</option>
+                    <option>Skagit County</option>
+                    <option>Skamania County</option>
+                    <option>Snohomish County</option>
+                    <option>Spokane County</option>
+                    <option>Stevens County</option>
+                    <option>Thurston County</option>
+                    <option>Wahkiakum County</option>
+                    <option>Walla Walla County</option>
+                    <option>Whatcom County</option>
+                    <option>Whitman County</option>
+                    <option>Yakima County</option>
+                </select>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <label for="city">City</label>
+            </div>
+            <div class="col-sm-2">
+                <select class="form-control" id="city" data-toggle="tooltip" title="City" disabled>
+                    <option>Select</option>
+                    <option>ABERDEEN</option>
+                    <option>AIRWAY HEIGHTS</option>
+                    <option>ALGONA</option>
+                    <option>ANACORTES</option>
+                    <option>ARLINGTON</option>
+                    <option>ASOTIN</option>
+                    <option>AUBURN</option>
+                    <option>BAINBRIDGE ISLAND</option>
+                    <option>BATTLE GROUND</option>
+                    <option>BELLEVUE</option>
+                    <option>BELLINGHAM</option>
+                    <option>BENTON CITY</option>
+                    <option>BINGEN</option>
+                    <option>BLACK DIAMOND</option>
+                    <option>BLAINE</option>
+                    <option>BONNEY LAKE</option>
+                    <option>BOTHELL</option>
+                    <option>BREMERTON</option>
+                    <option>BREWSTER</option>
+                    <option>BRIDGEPORT</option>
+                    <option>BRIER</option>
+                    <option>BUCKLEY</option>
+                    <option>BURIEN</option>
+                    <option>BURLINGTON</option>
+                    <option>CAMAS</option>
+                    <option>CARNATION</option>
+                    <option>CASHMERE</option>
+                    <option>CASTLE ROCK</option>
+                    <option>CENTRALIA</option>
+                    <option>CHEHALIS</option>
+                    <option>CHELAN</option>
+                    <option>CHENEY</option>
+                    <option>CHEWELAH</option>
+                    <option>CLARKSTON</option>
+                    <option>CLE ELUM</option>
+                    <option>CLYDE HILL</option>
+                    <option>COLFAX</option>
+                    <option>COLLEGE PLACE</option>
+                    <option>COLVILLE</option>
+                    <option>CONNELL</option>
+                    <option>COSMOPOLIS</option>
+                    <option>COVINGTON</option>
+                    <option>DAVENPORT</option>
+                    <option>DAYTON</option>
+                    <option>DEER PARK</option>
+                    <option>DES MOINES</option>
+                    <option>DUPONT</option>
+                    <option>DUVALL</option>
+                    <option>EAST WENATCHEE</option>
+                    <option>EDGEWOOD</option>
+                    <option>EDMONDS</option>
+                    <option>ELECTRIC CITY</option>
+                    <option>ELLENSBURG</option>
+                    <option>ELMA</option>
+                    <option>ENTIAT</option>
+                    <option>ENUMCLAW</option>
+                    <option>EPHRATA</option>
+                    <option>EVERETT</option>
+                    <option>EVERSON</option>
+                    <option>FEDERAL WAY</option>
+                    <option>FERNDALE</option>
+                    <option>FIFE</option>
+                    <option>FIRCREST</option>
+                    <option>FORKS</option>
+                    <option>GEORGE</option>
+                    <option>GIG HARBOR</option>
+                    <option>GOLD BAR</option>
+                    <option>GOLDENDALE</option>
+                    <option>GRAND COULEE</option>
+                    <option>GRANDVIEW</option>
+                    <option>GRANGER</option>
+                    <option>GRANITE FALLS</option>
+                    <option>HARRINGTON</option>
+                    <option>HOQUIAM</option>
+                    <option>ILWACO</option>
+                    <option>ISSAQUAH</option>
+                    <option>KAHLOTUS</option>
+                    <option>KALAMA</option>
+                    <option>KELSO</option>
+                    <option>KENMORE</option>
+                    <option>KENNEWICK</option>
+                    <option>KENT</option>
+                    <option>KETTLE FALLS</option>
+                    <option>KIRKLAND</option>
+                    <option>KITTITAS</option>
+                    <option>LA CENTER</option>
+                    <option>LACEY</option>
+                    <option>LAKE FOREST PARK</option>
+                    <option>LAKE STEVENS</option>
+                    <option>LAKEWOOD</option>
+                    <option>LANGLEY</option>
+                    <option>LEAVENWORTH</option>
+                    <option>LIBERTY LAKE</option>
+                    <option>LONG BEACH</option>
+                    <option>LONGVIEW</option>
+                    <option>LYNDEN</option>
+                    <option>LYNNWOOD</option>
+                    <option>MABTON</option>
+                    <option>MAPLE VALLEY</option>
+                    <option>MARYSVILLE</option>
+                    <option>MATTAWA</option>
+                    <option>MCCLEARY</option>
+                    <option>MEDICAL LAKE</option>
+                    <option>MEDINA</option>
+                    <option>MERCER ISLAND</option>
+                    <option>MESA</option>
+                    <option>MILL CREEK</option>
+                    <option>MILLWOOD</option>
+                    <option>MILTON</option>
+                    <option>MONROE</option>
+                    <option>MONTESANO</option>
+                    <option>MORTON</option>
+                    <option>MOSES LAKE</option>
+                    <option>MOSSYROCK</option>
+                    <option>MOUNT VERNON</option>
+                    <option>MOUNTLAKE TERRACE</option>
+                    <option>MOXEE</option>
+                    <option>MUKILTEO</option>
+                    <option>NAPAVINE</option>
+                    <option>NEWCASTLE</option>
+                    <option>NEWPORT</option>
+                    <option>NOOKSACK</option>
+                    <option>NORMANDY PARK</option>
+                    <option>NORTH BEND</option>
+                    <option>NORTH BONNEVILLE</option>
+                    <option>OAK HARBOR</option>
+                    <option>OAKVILLE</option>
+                    <option>OCEAN SHORES</option>
+                    <option>OKANOGAN</option>
+                    <option>OLYMPIA</option>
+                    <option>OMAK</option>
+                    <option>OROVILLE</option>
+                    <option>ORTING</option>
+                    <option>OTHELLO</option>
+                    <option>PACIFIC</option>
+                    <option>PALOUSE</option>
+                    <option>PASCO</option>
+                    <option>PATEROS</option>
+                    <option>POMEROY</option>
+                    <option>PORT ANGELES</option>
+                    <option>PORT ORCHARD</option>
+                    <option>PORT TOWNSEND</option>
+                    <option>POULSBO</option>
+                    <option>PRESCOTT</option>
+                    <option>PROSSER</option>
+                    <option>PULLMAN</option>
+                    <option>PUYALLUP</option>
+                    <option>QUINCY</option>
+                    <option>RAINIER</option>
+                    <option>RAYMOND</option>
+                    <option>REDMOND</option>
+                    <option>RENTON</option>
+                    <option>REPUBLIC</option>
+                    <option>RICHLAND</option>
+                    <option>RIDGEFIELD</option>
+                    <option>RITZVILLE</option>
+                    <option>ROCK ISLAND</option>
+                    <option>ROSLYN</option>
+                    <option>ROY</option>
+                    <option>ROYAL CITY</option>
+                    <option>RUSTON</option>
+                    <option>SAMMAMISH</option>
+                    <option>SEATAC</option>
+                    <option>SEATTLE</option>
+                    <option>SEDRO-WOOLLEY</option>
+                    <option>SELAH</option>
+                    <option>SEQUIM</option>
+                    <option>SHELTON</option>
+                    <option>SHORELINE</option>
+                    <option>SNOHOMISH</option>
+                    <option>SNOQUALMIE</option>
+                    <option>SOAP LAKE</option>
+                    <option>SOUTH BEND</option>
+                    <option>SPANGLE</option>
+                    <option>SPOKANE</option>
+                    <option>SPOKANE VALLEY</option>
+                    <option>SPRAGUE</option>
+                    <option>STANWOOD</option>
+                    <option>STEVENSON</option>
+                    <option>SULTAN</option>
+                    <option>SUMAS</option>
+                    <option>SUMNER</option>
+                    <option>SUNNYSIDE</option>
+                    <option>TACOMA</option>
+                    <option>TEKOA</option>
+                    <option>TENINO</option>
+                    <option>TIETON</option>
+                    <option>TOLEDO</option>
+                    <option>TONASKET</option>
+                    <option>TOPPENISH</option>
+                    <option>TUKWILA</option>
+                    <option>TUMWATER</option>
+                    <option>UNION GAP</option>
+                    <option>UNIVERSITY PLACE</option>
+                    <option>VADER</option>
+                    <option>VANCOUVER</option>
+                    <option>WAITSBURG</option>
+                    <option>WALLA WALLA</option>
+                    <option>WAPATO</option>
+                    <option>WARDEN</option>
+                    <option>WASHOUGAL</option>
+                    <option>WENATCHEE</option>
+                    <option>WEST RICHLAND</option>
+                    <option>WESTPORT</option>
+                    <option>WHITE SALMON</option>
+                    <option>WINLOCK</option>
+                    <option>WOODINVILLE</option>
+                    <option>WOODLAND</option>
+                    <option>WOODWAY</option>
+                    <option>YAKIMA</option>
+                    <option>YELM</option>
+                    <option>ZILLAH</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-inline col-sm-12">
+            <div class="col-sm-3">
+                <label for="state">State</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="msrp" disabled value="WA" data-toggle="tooltip" title="State" >
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <label for="zip">ZIP</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="zip" maxlength="5" data-toggle="tooltip" title="ZIP" disabled>
+            </div>
+        </div><div class="container col-sm-12">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-2">
+           <br> <input type="button" class="btn btn-success" role="button" id="edit" value="Edit" data-toggle="tooltip" title="Edit" onclick="myFunction()">
+           <a href="./VehcileSuccess.html" class="btn btn-success" style="display:none;" id="submit" role="button" data-toggle="tooltip" title="Submit"> Submit</a>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
+    </div>
+    <br><br>
+    <footer class="container-fluid text-center">
+        <p>© 2022 Group 12</p>
+    </footer>
+
+</body>
+
+</html>

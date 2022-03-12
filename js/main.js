@@ -5,10 +5,12 @@
 /**
  * Sample code
  */
-document.addEventListener('DOMContentLoaded', function() {
-  var ulElement = document.getElementById('links');
-  var liElement = document.createElement('li');
-  liElement.appendChild(document.createTextNode('created by main.js'));
+function enable()
+{    
+document.getElementById("vin").disabled = false;
+}
 
-  ulElement.appendChild(liElement);
-});
+function disable()
+{    
+document.getElementById("vin").disabled = false;
+}

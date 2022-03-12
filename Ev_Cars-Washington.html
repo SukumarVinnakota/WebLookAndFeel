@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>EV Cars Database--Home Page</title>
+    <title>EV Cars Database-Washington</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -93,66 +93,87 @@
             </div>
         </div>
     </nav>
-
-
     <div class="container">
-       <p style="font-size: 15px;"> Below is the list of Electronic Vehicles used in Washington State.    </p>
+        <div class="col-sm-12">
+            <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <a href="./Register_Vehcile.html" class="btn btn-success" role="button" title="Register a Vehicle" data-toggle="tooltip">Register a Vehicle</a>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <a href="./Update_Vehcile.html" class="btn btn-success" role="button" title="Edit/Update Vehicle Registration" data-toggle="tooltip">Edit/Update Vehicle Registration</a>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <a href="./Delete_Vehcile.html" class="btn btn-success" role="button" title="Delete Vehicle Registration" data-toggle="tooltip">Delete Vehicle Registration</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <p style="font-size: 15px;"><b> Below is the list of Electronic Vehicles used in Washington State.</b> </p>
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
-              <tr>
-                <th>County</th>
-                <th>City</th>
-                <th>Make</th>
-                <th>Model</th>
-                <th>Model Year</th>
-                <th>Electric Vehicle Type</th>
-              </tr>
+                <tr>
+                    <th>Vehicle Id</th>
+                    <th>County</th>
+                    <th>City</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Model Year</th>
+                    <th>Electric Vehicle Type</th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>King</td>
-                <td>Bellevue</td>
-                <td>Nissan</td>
-                <td>Leaf</td>
-                <td>2011</td>
-                <td>Battery Electric Vehicle (BEV)</td>
-              </tr>
-              <tr>
-                <td>King</td>
-                <td>Bellevue</td>
-                <td>Tesla</td>
-                <td>Model X</td>
-                <td>2017</td>
-                <td>Battery Electric Vehicle (BEV)</td>
-              </tr>
-              <tr>
-                <td>King</td>
-                <td>Seattle</td>
-                <td>Fiat</td>
-                <td>500</td>
-                <td>2017</td>
-                <td>Battery Electric Vehicle (BEV)</td>
-              </tr>
-              <tr>
-                <td>King</td>
-                <td>Bellevue</td>
-                <td>Tesla</td>
-                <td>Model S</td>
-                <td>2018</td>
-                <td>Battery Electric Vehicle (BEV)</td>
-              </tr>
+                <tr>
+                    <td>JN1AZ0CPXB</td>
+                    <td>King</td>
+                    <td>Bellevue</td>
+                    <td>Nissan</td>
+                    <td>Leaf</td>
+                    <td>2011</td>
+                    <td>Battery Electric Vehicle (BEV)</td>
+                </tr>
+                <tr>
+                    <td>5YJXCBE27H</td>
+                    <td>King</td>
+                    <td>Bellevue</td>
+                    <td>Tesla</td>
+                    <td>Model X</td>
+                    <td>2017</td>
+                    <td>Battery Electric Vehicle (BEV)</td>
+                </tr>
+                <tr>
+                    <td>3C3CFFGE7H</td>
+                    <td>King</td>
+                    <td>Seattle</td>
+                    <td>Fiat</td>
+                    <td>500</td>
+                    <td>2017</td>
+                    <td>Battery Electric Vehicle (BEV)</td>
+                </tr>
+                <tr>
+                    <td>5YJSA1E21J</td>
+                    <td>King</td>
+                    <td>Bellevue</td>
+                    <td>Tesla</td>
+                    <td>Model S</td>
+                    <td>2018</td>
+                    <td>Battery Electric Vehicle (BEV)</td>
+                </tr>
             </tbody>
-          </table>
-      </div>
+        </table>
+    </div>
 
-    
-<!--Pie Chart-->
+
+    <!--Pie Chart-->
     <div class="wrapper">
         <canvas id="myChart" width="400" height="400"></canvas>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <script src="./js/script.js"></script>
-<!--Pie Chart end-->
+    <!--Pie Chart end-->
     <div class="container text-center">
         <h3>Make of Electronic Vehicles in Washington State</h3>
         <br>
