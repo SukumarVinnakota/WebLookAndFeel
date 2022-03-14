@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>EV Cars Database-Register Vehcile</title>
+    <title>Electic Vehcile Database-Register Vehcile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -75,7 +75,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div class="navbar-brand"><a href="./index.html">EV Cars Database </a></div>
+                <div class="navbar-brand"><a href="./index.html">Electic Vehcile Database</a></div>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
@@ -104,14 +104,14 @@
         </legend>
         <div class="form-group form-inline col-sm-12">
             <div class="col-sm-3">
-                <label for="vin">Vehcile Identification Number</label>
+                <label for="vin">Vehicle Identification Number</label> &nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
-                <input type="text" class="form-control" id="vin" data-toggle="tooltip" title="Vehcile Identification Number" maxlength="10">
+                <input required type="text" class="form-control" id="vin" data-toggle="tooltip" title="Vehcile Identification Number" maxlength="10">
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-3">
-                <label for="make">Vehcile Manufacturer</label>
+                <label for="make">Vehicle Manufacturer</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="make" data-toggle="tooltip" title="Vehcile Manufacturer" maxlength="10">
@@ -119,14 +119,14 @@
         </div>
         <div class="form-group form-inline col-sm-12">
             <div class="col-sm-3">
-                <label for="year">Year of Manufacturing</label>
+                <label for="year">Year of Manufacturing</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="year" data-toggle="tooltip" title="Year of Manufacturing" maxlength="4">
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-3">
-                <label for="model">Vehcile Model</label>
+                <label for="model">Vehicle Model</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="model" data-toggle="tooltip" title="Vehcile Modal" maxlength="10">
@@ -141,7 +141,7 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-3">
-                <label for="msrp">Manufacturer's Suggested Retail Price</label>
+                <label for="msrp">Manufacturer's Suggested Retail Price <label style="color: red;">*</label></label>
             </div>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="msrp" data-toggle="tooltip" title="Manufacturer's Suggested Retail Price">
@@ -149,7 +149,7 @@
         </div>
         <div class="form-group form-inline col-sm-12">
             <div class="col-sm-3">
-                <label for="evt">Electric Vehicle Type</label>
+                <label for="evt">Electric Vehicle Type</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-3">
                 <select class="form-control" id="evt" data-toggle="tooltip" title="Electric Vehicle Type">
@@ -162,7 +162,7 @@
 
         <div class="form-group form-inline col-sm-12">
             <div class="col-sm-3">
-                <label for="capv">Clean Alternative Fuel Vehicle (CAFV) Eligibility</label>
+                <label for="capv">Clean Alternative Fuel Vehicle (CAFV) Eligibility &nbsp;<label style="color: red;">*</label></label>
             </div>
             <div class="col-sm-3">
                 <select class="form-control" id="capv" data-toggle="tooltip" title="Clean Alternative Fuel Vehicle (CAFV) Eligibility">
@@ -174,7 +174,7 @@
         </div>
         <div class="form-group form-inline col-sm-12">
             <div class="col-sm-3">
-                <label for="ad1">Address Line1</label>
+                <label for="ad1">Address Line1</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="ad1" required data-toggle="tooltip" title="Address Line1">
@@ -189,7 +189,7 @@
         </div>
         <div class="form-group form-inline col-sm-12">
             <div class="col-sm-3">
-                <label for="county">County</label>
+                <label for="county">County</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
                 <select class="form-control" id="county" data-toggle="tooltip" title="County">
@@ -237,7 +237,7 @@
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-3">
-                <label for="city">City</label>
+                <label for="city">City</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
                 <select class="form-control" id="city" data-toggle="tooltip" title="City">
@@ -459,14 +459,14 @@
         </div>
         <div class="form-group form-inline col-sm-12">
             <div class="col-sm-3">
-                <label for="state">State</label>
+                <label for="state">State</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="msrp" disabled value="WA" data-toggle="tooltip" title="State">
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm-3">
-                <label for="zip">ZIP</label>
+                <label for="zip">ZIP</label>&nbsp;<label style="color: red;">*</label>
             </div>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="zip" maxlength="5" data-toggle="tooltip" title="ZIP">
